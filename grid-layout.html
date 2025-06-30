@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Layout Example</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 60px 1fr 50px;
+      height: 100vh;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    header {
+      grid-area: header;
+      background: #444;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      grid-area: sidebar;
+      background: #f4f4f4;
+      padding: 1rem;
+    }
+
+    main {
+      grid-area: main;
+      background: #e8f0fe;
+      padding: 1rem;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #444;
+      color: white;
+      text-align: center;
+      padding: 0.8rem;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      nav, main, footer, header {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 My Grid Page</h1>
+    </header>
+
+    <nav>
+      <h3>Sidebar</h3>
+      <ul>
+        <li><a href="#">Menu A</a></li>
+        <li><a href="#">Menu B</a></li>
+        <li><a href="#">Menu C</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Main Content</h2>
+      <p>This is the primary content area.</p>
+      <p>Try resizing the window to see the grid reflow on mobile.</p>
+    </main>
+
+    <footer>
+      &copy; 2025 Sagar S P
+    </footer>
+  </div>
+</body>
+</html>

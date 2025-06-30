@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar S P | Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Google Fonts for modern look -->
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#blog">Blog</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <select aria-label="More Links" onchange="if(this.value) window.location.href=this.value;">
+                <option value="">More</option>
+                <option value="#about">About</option>
+                <option value="#skills">Skills</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <img src="image4.jpg" alt="Profile Picture" width="150">
+        <div>
+            <div class="intro">
+                <p>Hi, I'm <strong>Sagar S P</strong>, a <span style="color:var(--secondary);">Full-Stack Developer</span>.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://twitter.com/" aria-label="Twitter" target="_blank">🐦</a>
+                <a href="https://github.com/" aria-label="GitHub" target="_blank">🐙</a>
+                <a href="https://linkedin.com/" aria-label="LinkedIn" target="_blank">💼</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <h1>Welcome to My Portfolio</h1>
+        <p>This is my modern portfolio. Explore my projects, skills, and get in touch!</p>
+
+        <!-- About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Learning full-stack development in 2025! Passionate about building scalable web applications and beautiful user experiences.</p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML &amp; CSS</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>REST APIs</li>
+            </ul>
+        </section>
+
+        <!-- Latest Project -->
+        <article id="projects">
+            <h2>Latest Project</h2>
+            <p>I built a cool app with React and MongoDB!</p>
+        </article>
+
+        <!-- Projects Gallery -->
+        <section>
+            <h2>Projects Gallery</h2>
+            <div class="projects-gallery">
+                <img src="project1.png" alt="Project 1" width="100">
+                <img src="project2.png" alt="Project 2" width="100">
+                <img src="project3.png" alt="Project 3" width="100">
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section>
+            <h2>Testimonials</h2>
+            <blockquote>
+                "Great work and attention to detail!" – Client A
+            </blockquote>
+            <blockquote>
+                "Delivered on time and exceeded expectations." – Client B
+            </blockquote>
+        </section>
+
+        <!-- Table -->
+        <!--<section>
+            <h2>Team</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Developer</td>
+                </tr>
+            </table>
+        </section> -->
+
+        <!-- Contact Form -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="form-container">
+                <form action="/submit" method="post">
+                    <label for="name2">Name:</label>
+                    <input type="text" id="name2" name="name" required>
+
+                    <label for="email2">Email:</label>
+                    <input type="email" id="email2" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section>
+            <h2>Newsletter Signup</h2>
+            <form action="/newsletter" method="post">
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Google Maps Embed -->
+        <section>
+            <h2>Our Location</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019013717646!2d-122.41941508468197!3d37.7749297797597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c7e2e8e7b%3A0x8e8e8e8e8e8e8e8e!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1610000000000"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" title="Google Maps"></iframe>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="position:fixed;bottom:20px;right:20px;background:var(--secondary);color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:1.3rem;box-shadow:var(--shadow);cursor:pointer;">↑</button>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Sagar S P</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('darkModeToggle').onclick = function() {
+            document.body.classList.toggle('dark-mode');
+        };
+        document.querySelector('nav select').addEventListener('change', function() {
+            if (this.value) {
+                window.location.href = this.value;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Visual Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #444;
+    }
+
+    .flex-container {
+      display: flex;
+      background: #f0f0f0;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      min-height: 100px;
+      gap: 10px;
+    }
+
+    .box {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    .small { width: 60px; }
+    .medium { width: 100px; }
+    .large { width: 140px; }
+  </style>
+</head>
+<body>
+
+  <h1>🌈 Flexbox Visual Guide</h1>
+
+  <!-- Justify Content -->
+  <h2>1. justify-content: space-around</h2>
+  <div class="flex-container" style="justify-content: space-around;">
+    <div class="box small">1</div>
+    <div class="box medium">2</div>
+    <div class="box large">3</div>
+  </div>
+
+  <h2>2. justify-content: space-between</h2>
+  <div class="flex-container" style="justify-content: space-between;">
+    <div class="box small">1</div>
+    <div class="box medium">2</div>
+    <div class="box large">3</div>
+  </div>
+
+  <h2>3. justify-content: center</h2>
+  <div class="flex-container" style="justify-content: center;">
+    <div class="box small">1</div>
+    <div class="box medium">2</div>
+    <div class="box large">3</div>
+  </div>
+
+  <!-- Align Items -->
+  <h2>4. align-items: flex-start</h2>
+  <div class="flex-container" style="align-items: flex-start; height: 150px;">
+    <div class="box small">A</div>
+    <div class="box medium">B</div>
+    <div class="box large">C</div>
+  </div>
+
+  <h2>5. align-items: center</h2>
+  <div class="flex-container" style="align-items: center; height: 150px;">
+    <div class="box small">A</div>
+    <div class="box medium">B</div>
+    <div class="box large">C</div>
+  </div>
+
+  <!-- Flex Direction -->
+  <h2>6. flex-direction: column</h2>
+  <div class="flex-container" style="flex-direction: column; align-items: flex-start;">
+    <div class="box">First</div>
+    <div class="box">Second</div>
+    <div class="box">Third</div>
+  </div>
+
+  <!-- Wrap -->
+  <h2>7. flex-wrap: wrap</h2>
+  <div class="flex-container" style="flex-wrap: wrap;">
+    <div class="box small">1</div>
+    <div class="box small">2</div>
+    <div class="box small">3</div>
+    <div class="box small">4</div>
+    <div class="box small">5</div>
+    <div class="box small">6</div>
+    <div class="box small">7</div>
+    <div class="box small">8</div>
+  </div>
+
+</body>
+</html>

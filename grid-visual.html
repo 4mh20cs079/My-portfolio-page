@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Visual Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #444;
+    }
+
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+    }
+
+    .grid-item {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      font-size: 1.1rem;
+      text-align: center;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧠 CSS Grid Visual Guide</h1>
+
+  <!-- Basic Grid -->
+  <h2>1. Basic 2x3 Grid (grid-template-columns)</h2>
+  <div class="grid-container" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+  <!-- Grid with fixed and flexible columns -->
+  <h2>2. Mixed Columns: 150px | 1fr | 2fr</h2>
+  <div class="grid-container" style="grid-template-columns: 150px 1fr 2fr;">
+    <div class="grid-item">Left</div>
+    <div class="grid-item">Middle</div>
+    <div class="grid-item">Right</div>
+  </div>
+
+  <!-- Grid Area Placement -->
+  <h2>3. Grid Areas</h2>
+  <div class="grid-container" style="
+    grid-template-areas: 
+      'header header'
+      'sidebar content';
+    grid-template-columns: 150px 1fr;
+  ">
+    <div class="grid-item" style="grid-area: header;">Header</div>
+    <div class="grid-item" style="grid-area: sidebar;">Sidebar</div>
+    <div class="grid-item" style="grid-area: content;">Main Content</div>
+  </div>
+
+  <!-- Item Spanning -->
+  <h2>4. Item Spanning (grid-column / grid-row)</h2>
+  <div class="grid-container" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="grid-item" style="grid-column: span 2;">Span 2 Columns</div>
+    <div class="grid-item">Box</div>
+    <div class="grid-item">Box</div>
+    <div class="grid-item" style="grid-column: 1 / 4;">Full Row</div>
+  </div>
+
+</body>
+</html>
